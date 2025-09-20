@@ -6,13 +6,13 @@ import { Component, computed, ElementRef, viewChild } from '@angular/core';
   imports: [],
   exportAs: 'dialogComp',
   templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.scss'
+  styleUrl: './dialog.component.scss',
 })
 export class DialogComponent {
   dialogRef = viewChild.required<ElementRef>('dialogRef');
   dialogEl = computed(() => {
     return this.dialogRef().nativeElement as HTMLDialogElement;
-  })
+  });
 
   close() {
     this.dialogEl().close();
@@ -21,5 +21,4 @@ export class DialogComponent {
   open() {
     this.dialogEl().showModal();
   }
-
 }
