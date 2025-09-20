@@ -27,8 +27,15 @@
     </li>
   </ul>
   <app-dialog>
-    <h2 slot="dialogHeading">Confirm Delete</h2>
-    <p class="py-4">Dialog content</p>
-    <button slot="dialogAction" class="btn btn-primary">Confirm</button>
+    <h2 ngProjectAs="dialogHeading">Confirm Delete</h2>
+
+    <div ngProjectAs="dialogContent">
+      <p class="py-4">Dialog content</p>
+      <p class="text-gray-500">This is secondary</p>
+    </div>
+
+    <div ngProjectAs="dialogAction">
+      <button class="btn btn-primary">Confirm</button>
+    </div>
   </app-dialog>
 </div>
